@@ -27,15 +27,18 @@ with open(csvpath) as csvfile:
         months.append(row[0])
         net_rev +=int(row[1])
 
+        #find min revenue
+        if(minRev>int(row[1])):
+            minRev=int(row[1])
+            minRev_month = row[0]
+        
+        
         #find max revenue
         if(maxRev<int(row[1])):
             maxRev = int(row[1])
             maxRev_month = row[0]
 
-        #find min revenue
-        if(minRev>int(row[1])):
-            minRev=int(row[1])
-            minRev_month = row[0]
+        
 
     #print the statements
     print(f'Financial Analysis')
