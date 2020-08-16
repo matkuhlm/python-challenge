@@ -50,6 +50,14 @@ with open(csvpath) as csvfile:
     print(f'Greatest decrease in Profits: {minRev} ({minRev_month})')
 
 print('________________________________________________________________')
+
+
+textList =['Financial Analysis','----------------------------',f'Total Months: {len(months)}',f'Net Revenue: ${net_rev}',f'Average Change: ${net_rev / len(months), 2}',f'Greatest increase in Profits: {maxRev_month} ({maxRev})',f'Greatest decrease in Profits: {minRev} ({minRev_month})']
+analysis_txt = open("budget_analysis_output.txt", "w")
+for line in textList:
+    f.write(line)
+    f.write("\n")
+outF.close()
 #The net total amount of "Profit/Losses" over the entire period
 
 
