@@ -21,7 +21,7 @@ with open(csvpath) as csvfile:
     net_rev = 0
     maxRev = 0
     minRev = 0
-
+#add change
     #loop data for months and net rev
     for row in csvreader:
         months.append(row[0])
